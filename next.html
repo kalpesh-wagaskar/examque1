@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummaryPage</title>
+</head>
+<body onload=getData()>
+    
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>username</th>
+                <th>password</th>
+                <th>email</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>marks12</th>
+                <th>marks10</th>
+                <th>University</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="usename"></td>
+                <td id="password"></td>
+                <td id="email"></td>
+                <td id="age"></td>
+                <td id="gender"></td>
+                <td id="marks12"></td>
+                <td id="marks10"></td>
+                <td id="University"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <table>
+        <tr id="one"></tr>
+    </table> -->
+    
+    
+    <script>
+            function getData(){
+            document.getElementById('usename').innerText= sessionStorage.getItem('usename');
+            document.getElementById('password').innerText=sessionStorage.getItem('password');
+            document.getElementById('email').innerText=sessionStorage.getItem('email');
+            document.getElementById('age').innerText=sessionStorage.getItem('age');
+            document.getElementById('gender').innerText=sessionStorage.getItem('gender');
+            document.getElementById('marks12').innerText=sessionStorage.getItem('marks12');
+            document.getElementById('marks10').innerText=sessionStorage.getItem('marks10' );
+            document.getElementById('University').innerText=sessionStorage.getItem('University');
+            document.getElementById('one').innerText=sessionStorage.getItem('name', name);
+
+            }
+    </script>
+</body>
+</html>

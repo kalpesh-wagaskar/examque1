@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <!-- <form action="next.html" method="get" target="_blank">
+
+     
+     <div class="table-responsive">
+        <table class="table table-hover">
+
+            <tbody>
+                <tr>
+                    <td>UserName</td>
+                    <td>
+                        
+                        <input type="text" name="usename" id="usename" >
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td>
+                        
+                        <input type="password" name="password" id="password">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        
+                        <input type="email" name="email" id="email" >
+                        
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td>Age</td>
+                    <td>
+                        
+                        <input type="number" name="age" id="age" >
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        
+                        <input type="text" name="address" id="address" >
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <div class="radio">
+                                  Male
+                                <input type="radio" name="gender" id="gender" value="Male" checked="checked">
+                                female
+                                <input type="radio" name="gender" id="gender" value="Female" checked="checked">
+
+                      </div>
+                    </td>
+                       
+                         
+                    </td>
+                </tr>
+                <tr>
+                    <td>12%</td>
+                    <td>
+                        
+                        <input type="number" name="12marks" id="12marks">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>10%</td>
+                    <td>
+                        
+                        <input type="number" name="10marks" id="10marks" >
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>University</td>
+                    <td>
+                        
+                        <input type="text" name="University" id="University" >
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <input type="button" value="yes" onclick="setData()">
+                </tr>
+                <tr>
+                    <input type="submit" value="Save">
+                </tr>
+            </tbody>
+        </table>
+       
+     </div>
+     
+    </form> -->
+    <form name="form1" action="next.html" method="get">
+       
+        <div class="table-responsive">
+            <table class="table table-hover">
+    
+                <tbody>
+                    <tr>
+                        <td>UserName</td>
+                        <td>
+                            
+                            <input type="text" name="usename" id="usename" >
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>
+                            
+                            <input type="password" name="password" id="password">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            
+                            <input type="email" name="email" id="email" >
+                            
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td>Age</td>
+                        <td>
+                            
+                            <input type="number" name="age" id="age" >
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>
+                            
+                            <input type="text" name="address" id="address" >
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <div class="radio">
+                                      Male
+                                    <input type="radio" name="gender" id="gender" value="Male" checked="checked">
+                                    female
+                                    <input type="radio" name="gender" id="gender" value="Female" checked="checked">
+    
+                          </div>
+                        </td>
+                           
+                             
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12%</td>
+                        <td>
+                            
+                            <input type="number" name="12marks" id="12marks">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10%</td>
+                        <td>
+                            
+                            <input type="number" name="10marks" id="10marks" >
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>University</td>
+                        <td>
+                            
+                            <input type="text" name="University" id="University" >
+                            
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <input type="button" value="yes" onclick="setData()">
+                    </tr>
+                    <tr>
+                        <input type="submit" value="Save">
+                    </tr> -->
+                </tbody>
+            </table>
+       
+        
+        <input type="submit" value="next" >
+        <button type="button" id="print" onClick="setData()"> save </button>
+        </form>
+    <!-- <form name="form1" action="next.html" method="get">
+       
+       
+       
+        name:<input type ="text" id="name" name="n">
+        <input type="submit" value="next" >
+        <button type="button" id="print" onClick="setData()"> Print </button>
+        </form> -->
+   <script>
+        function setData(){
+
+            var usename=document.getElementById('usename').value;
+            var password=document.getElementById('password').value;
+            var email=document.getElementById('email').value;
+            var age=document.getElementById('age').value;
+            var gender=document.getElementsByName('gender').value;
+            var address=document.getElementById('address').value;
+            var marks12=document.getElementById('12marks').value;
+            var marks10=document.getElementById('10marks').value;
+            var University=document.getElementById('University').value;
+
+            sessionStorage.setItem('usename', usename);
+            sessionStorage.setItem('password', password);
+            sessionStorage.setItem('email', email);
+            sessionStorage.setItem('age', age);
+            sessionStorage.setItem('gender', gender);
+            sessionStorage.setItem('marks12',marks12 );
+            sessionStorage.setItem('marks10',marks10 );
+            sessionStorage.setItem('University',University );
+
+
+
+            var name=document.getElementById('name').value;
+            sessionStorage.setItem('name', name);
+
+
+            
+
+            
+
+
+
+
+        }
+    </script>
+</body>
+</html>
